@@ -1,0 +1,9 @@
+GET / HTTP/1.1
+Sec-WebSocket-Protocol: rust-websocket
+Sec-WebSocket-Key: AAAAAAAAAAAAAAAAAAAAAA==
+Host: 127.0.0.1:2998
+Connection: Upgrade
+Upgrade: websocket
+Sec-WebSocket-Version: 13
+
+‚Œf†åå‰„w9¸Ä'pöƒˆ€ÔÏ¦[
