@@ -1,0 +1,36 @@
+[package]
+name = "websocket-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+hyper = "*"
+
+[dependencies.websocket]
+path = ".."
+default-features = false
+features = ["sync"]
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "client"
+path = "fuzz_targets/client.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "server"
+path = "fuzz_targets/server.rs"
+test = false
+doc = false
+
+[profile.release]
+debug = true
