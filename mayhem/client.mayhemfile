@@ -1,0 +1,7 @@
+project: rust-websocket
+target: client
+
+cmds:
+  - cmd: /client
+  - cmd: /client_no_inst @@
+    libfuzzer: false
